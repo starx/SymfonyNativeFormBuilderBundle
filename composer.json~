@@ -20,9 +20,6 @@
     },
     "autoload": {
         "psr-4": { "Starx\\SymfonyNativeFormBuilderBundle\\": "" },
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
     },
     "minimum-stability": "dev"
 }

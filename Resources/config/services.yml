@@ -1,0 +1,10 @@
+services:
+    app.native_form_builder:
+        class: Starx\SymfonyNativeFormBuilderBundle\Services\NativeFormBuilderService
+        arguments: [ "@form.factory" ]
+    app.native_form_builder_extension:
+        class: Starx\SymfonyNativeFormBuilderBundle\Twig\NativeFormBuilderExtension
+        public: false
+        arguments: [ "@app.native_form_builder" ]
+        tags:
+          - { name: twig.extension }

@@ -1,0 +1,3 @@
+starx_symfony_native_form_builder_homepage:
+    path:     /
+    defaults: { _controller: StarxSymfonyNativeFormBuilderBundle:Default:index }

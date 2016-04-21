@@ -14,13 +14,14 @@ class NativeFormBuilderService
         $this->formFactory = $formFactory;
     }
 
-    public function getNativeBuilder($data = null, array $options = array()) {
-        return $this->formFactory->createBuilder(FormType::class, $data, $options);
+    // Native Form
+    public function getNativeBuilder($type = FormType::class, $data = null, array $options = array()) {
+        return $this->formFactory->createBuilder($type, $data, $options);
     }
 
 
-    public function getNativeForm($action_path, $method = "GET", $data = null, $options = array()) {
-        $builder = $this->getNativeBuilder($data, $options);
+    public function getNativeForm($action_path, $method = "GET", $type = FormType::class, $data = null, $options = array()) {
+        $builder = $this->getNativeBuilder($type, $data, $options);
         $form = $builder
             ->setAction($action_path)
             ->setMethod($method)
@@ -28,8 +29,8 @@ class NativeFormBuilderService
         return $form;
     }
 
-    public function getNativeFormView($action_path, $method = "GET", $data = null, $options = array()) {
-        $form = $this->getNativeForm($action_path, $method, $data, $options);
+    public function getNativeFormView($action_path, $method = "GET", $type = FormType::class, $data = null, $options = array()) {
+        $form = $this->getNativeForm($action_path, $method, $type, $data, $options);
         return $form->createView();
     }
 

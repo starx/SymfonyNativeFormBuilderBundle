@@ -1,7 +1,7 @@
 {
     "name": "starx/symfony-native-form-builder",
     "description": "This bundle allows to generate simple native form using Twig",
-    "keywords": [],
+    "keywords": ["symfony", "form", "builder", "twig", "helper"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -11,11 +11,10 @@
         }
     ],
     "require": {
+        "php": ">=5.3.1",
         "symfony/framework-bundle": "~2.7|~3.0",
         "symfony/process": "~2.7|~3.0",
-        "symfony/yaml": "~2.7|~3.0"
-    },
-    "require-dev": {
+        "symfony/yaml": "~2.7|~3.0",
         "twig/twig": "~1.18"
     },
     "autoload": {
